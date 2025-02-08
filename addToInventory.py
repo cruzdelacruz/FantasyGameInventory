@@ -1,4 +1,9 @@
-def addToInventory(inventory, added_items):
+def add_to_inventory(inventory, added_items):
+    """inventory is a dictionary, added_items is a list.
+    """
+    if not isinstance(inventory, dict):
+        raise TypeError("Inventory muust be a dictionary")
+        
     for item in added_items:
         if item not in inventory:
             inventory[item] = 1
@@ -7,7 +12,7 @@ def addToInventory(inventory, added_items):
     return inventory
 
 
-def displayInventory(inventory):
+def display_inventory(inventory):
     print("Inventory:")
     item_total = 0
     for k, v in inventory.items():
@@ -18,5 +23,5 @@ def displayInventory(inventory):
 
 inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
-inv = addToInventory(inv, dragonLoot)
-displayInventory(inv)
+inv = add_to_inventory(inv, dragonLoot)
+display_inventory(inv)
