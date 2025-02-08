@@ -1,9 +1,9 @@
-def addToInventory(inventory, addedItems):
-    for i in range(len(addedItems)):
-        if addedItems[i] not in inventory:
-            inventory[addedItems[i]] = 1
+def addToInventory(inventory, added_items):
+    for item in added_items:
+        if item not in inventory:
+            inventory[item] = 1
         else:
-            inventory[addedItems[i]] += 1
+            inventory[item] += 1
     return inventory
 
 
