@@ -10,11 +10,11 @@ class inventory():
             if item in self.inventory:
                 self.inventory[item] += count
                 self.total_inventory += count
-                print(f"new item!, +{count} {item}")
+                print(f"+{count} {item}")
             else:
                 self.inventory[item] = count
                 self.total_inventory += count
-                print(f"+{count} {item}")
+                print(f"new item!, +{count} {item}")
         else:
             print("not enough space in bag!!")
             
